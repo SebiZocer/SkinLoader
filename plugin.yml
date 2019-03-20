@@ -1,0 +1,7 @@
+name: SkinLoader
+version: 3.0.0
+author: Sebi_Zocer
+description: Coreplugin for managing skins and nicks
+main: me.SebiZocer.SkinLoader.Main.Mainclass
+commands:
+  
