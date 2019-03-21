@@ -25,10 +25,7 @@ public class Mainclass extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
     	plugin = this;
-    	Info.custom("Registering Events...");
     	registerEvents();
-    	Info.success();
-    	Info.custom("Setting Infos...");
     	setInfos();
         System.out.println("[" + getDescription().getName() + "] enabled. Plugin by Sebi_Zocer");
     }
