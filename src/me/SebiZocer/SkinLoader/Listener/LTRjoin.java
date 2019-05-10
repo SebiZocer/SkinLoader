@@ -22,11 +22,14 @@ public class LTRjoin implements Listener {
 		MySQLProfile.createProfile(ProfileManager.getProfile(e.getPlayer().getUniqueId()));
 		MySQLNick.createUser(p.getUniqueId());
 		Manager.renickCheck(p.getPlayer());
+		boolean skin = !MySQLSkin.getCurrentSkin(p.getUniqueId()).getName().equals(p.getRealname());
 		if(ConfigManager.getConfigManager("config").getYaml().getBoolean("autonick") == true){
 			if(p.getAutonick() == false){
-				p.loadSkin();
+				if(skin){
+					p.loadSkin();
+				}
 			}
-		} else {
+		} else if(skin){
 			p.loadSkin();
 		}
 	}
